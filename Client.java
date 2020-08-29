@@ -16,27 +16,49 @@ public class Client {
         checkForMatches.put("Окно","Window");
         checkForMatches.put("Деньги","Money");
         checkForMatches.put("Дом","House");
+        checkForMatches.put("Холодильник","Refrigerator");
+        checkForMatches.put("Стол","Table");
+        checkForMatches.put("Лошадь","Horse");
+        checkForMatches.put("Кот","Cat");
+        checkForMatches.put("Стена","Wall");
+        checkForMatches.put("Диван","Sofa");
+        checkForMatches.put("Учитель","Teacher");
+        checkForMatches.put("Брюки","Pants");
+        checkForMatches.put("Розетка","Power socket");
+        checkForMatches.put("Пылесос","Vacuum cleaner");
+        checkForMatches.put("Куртка","Jacket");
+        checkForMatches.put("Орех","Nut");
+        checkForMatches.put("Вода","Water");
+        checkForMatches.put("Человек","People");
+        checkForMatches.put("Ночь","Night");
+        checkForMatches.put("Бруноям","Brunoyam");
         
         int min = 0;
-        int max = 3;
+        int max = 19;
         int diff = max - min;
         Random random = new Random();
         int i = random.nextInt(diff + 1);
         i += min;
 
-        System.out.println("Напиши перевод слова "+ checkForMatches.values()+"");
+        System.out.println("Напиши перевод слова "+ checkForMatches.values().toArray()[i]+"");
 
         String word =scanner.next();
-            System.out.println(checkForMatches.get(word));
+
 
         int points = 0;
-        if ()
+        int a = 0;
+
+        if (word.equals(checkForMatches.keySet().toArray()[i]))
         {
-            System.out.println("Количество слов подряд:"+points+"");
+            a++;
+            points = points + a;
+            System.out.println("Верно! Количество очков: "+points+". Слов переведенных подряд: "+a+"");
         }
         else{
-            points=0;
+            a=0;
+            System.out.println("Не правильно=( Количество очков: "+points+"");
         }
+
     }
 
     }
